@@ -94,5 +94,7 @@ $invoice = Invoice::upcoming([
 printLine(json_encode($invoice->jsonSerialize()), JSON_PRETTY_PRINT);
 
 
-
+/****************************************************************************************
+ * 6. print all line_items as json
+ ***************************************************************************************/
 printLine(json_encode($invoice->lines->all()->jsonSerialize(), JSON_PRETTY_PRINT));
